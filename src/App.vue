@@ -1,43 +1,21 @@
 <template>
-  <div class="container">
-    <Category title="美食">
-      <img src="https://s3.ax1x.com/2021/01/16/srJlq0.jpg" />
-    </Category>
-
-    <Category title="游戏">
-      <ul>
-        <li v-for="(g, index) in games" :key="index">{{g}}</li>
-      </ul>
-    </Category>
-
-    <Category title="电影">
-      <video controls src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"></video>
-    </Category>
-  </div>
+  <Count />
 </template>
 
 <script>
-import Category from "./components/Category.vue";
+import Count from "./components/Count.vue";
 
 export default {
   name: 'App',
-  components: { Category },
+  components: { Count },
   data() {
     return {
-      foods: ['鸡蛋', '下龙虾'],
-      games: ['cf', 'lol', 'Dota'],
-      film: ['aa', 'bb']
+
     }
   },
 }
 </script>
 
 <style>
-.container {
-  display: flex;
-  justify-content: space-around;
-}
-video{
-  width: 100%;
-}
+
 </style>

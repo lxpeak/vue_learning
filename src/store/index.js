@@ -12,7 +12,10 @@ const actions = {}
 //准备mutation用于操作数据（改变state）
 const mutations = {}
 //准备state用于存储数据
-const state = {}
+const state = {
+    //当前的和
+    sum: 0
+}
 
 //创建并导出store
 export default new Vuex.Store({
