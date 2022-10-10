@@ -1,6 +1,6 @@
-# vue_test
+# vue的学习笔记
 
-## Project setup
+## 如何搭建vue项目环境（Project setup） 
 ```
 npm install
 ```

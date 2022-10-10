@@ -1,0 +1,1 @@
+将本文件夹下的components、App.vue、main.js文件放到有脚手架的vue项目的src文件夹下执行
