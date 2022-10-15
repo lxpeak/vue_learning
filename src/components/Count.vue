@@ -1,7 +1,7 @@
 <!-- 作用域插槽 -->
 <template>
     <div>
-        <h1>当前求和为：{{sum}}</h1>
+        <h1>当前求和为：{{$store.state.sum}}</h1>
         <select v-model.number="n">
             <option value="1">1</option>
             <option value="2">2</option>
@@ -21,29 +21,26 @@ export default {
         return {
             //用户选择的数字
             n: 1,
-
         };
     },
     methods: {
-        increment(){
-
+        increment() {
+            this.$store.dispatch('jia', this.n)
         },
-        decrement(){
-
+        decrement() {
+            this.$store.dispatch('jian', this.n)
         },
-        incrementOdd(){
-
+        incrementOdd() {
+            this.$store.dispatch('jiaOdd', this.n)
         },
-        incrementWait(){
-            setTimeout(() => {
-                
-            }, 500);
+        incrementWait() {
+            this.$store.dispatch('jiaWait', this.n)
         }
     }
 }
 </script>
 <style scoped>
-    button {
-        margin-left: 5px;
-    }
+button {
+    margin-left: 5px;
+}
 </style>
