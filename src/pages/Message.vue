@@ -45,6 +45,28 @@ export default {
             ]
         };
     },
+    methods: {
+        pushShow(m) {
+            this.$router.push({
+                // 传递params参数时不能用path只能用name
+                name: 'detail',
+                params: {
+                    id: m.id,
+                    title: m.title,
+                }
+            })
+        },
+        replaceShow(m) {
+            this.$router.replace({
+                // 传递params参数时不能用path只能用name
+                name: 'detail',
+                params: {
+                    id: m.id,
+                    title: m.title,
+                }
+            })
+        }
+    },
 }
 </script>
 <style scoped>
