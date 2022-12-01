@@ -3,7 +3,7 @@
         <ul>
             <li v-for="m in messageList" :key="m.id">
                 <!-- 建议用第二种 -->
-
+                
                 <!-- 第一种方式 -->
                 <!-- 跳转路由并携带params参数，to的字符串写法 -->
                 <!-- <router-link :to="`/home/message/detail/${m.id}/${m.title}`">{{ m.title }}</router-link> -->
@@ -13,16 +13,15 @@
                 <!-- 跳转路由并携带params参数，to的对象写法 -->
                 <router-link :to="{
                     // 传递params参数时不能用path只能用name
-                    name: 'detail',
-                    params: {
-                        id: m.id,
-                        title: m.title,
+                    name:'detail',
+                    params:{
+                        id:m.id,
+                        title:m.title,
                     }
                 }">
                     {{ m.title }}
                 </router-link>
-                <button @click="pushShow(m)">push查看</button>
-                <button @click="replaceShow(m)">replace查看</button>
+
             </li>
         </ul>
         <hr>
@@ -46,31 +45,6 @@ export default {
             ]
         };
     },
-    methods: {
-        pushShow(m) {
-            this.$router.push({
-                // 传递params参数时不能用path只能用name
-                name: 'detail',
-                params: {
-                    id: m.id,
-                    title: m.title,
-                }
-            })
-        },
-        replaceShow(m) {
-            this.$router.replace({
-                // 传递params参数时不能用path只能用name
-                name: 'detail',
-                params: {
-                    id: m.id,
-                    title: m.title,
-                }
-            })
-        }
-    },
-    beforeDestroy(){
-        console.log('Message组件即将被销毁');
-    }
 }
 </script>
 <style scoped>
