@@ -68,9 +68,6 @@ export default {
             })
         }
     },
-    beforeDestroy(){
-        console.log('Message组件即将被销毁');
-    }
 }
 </script>
 <style scoped>

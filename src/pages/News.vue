@@ -1,8 +1,8 @@
 <template>
     <ul>
-        <li>news001 <input type="text"/></li>
-        <li>news002 <input type="text"/></li>
-        <li>news003 <input type="text"/></li>
+        <li>news001</li>
+        <li>news002</li>
+        <li>news003</li>
     </ul>
 </template>
 
@@ -20,9 +20,14 @@ export default {
 
         };
     },
-    beforeDestroy(){
-        console.log('News组件即将被销毁');
-    }
+    //监听属性 类似于data概念
+    computed: {},
+    //监控data中的数据变化
+    watch: {},
+    //方法集合
+    methods: {
+
+    },
 }
 </script>
 <style scoped>

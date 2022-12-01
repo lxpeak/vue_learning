@@ -11,10 +11,7 @@
                 </li>
             </ul>
         </div>
-        <!-- include里填的是组件的名字，即<script>里的name值,不是文件名 -->
-        <keep-alive include="News">
-            <router-view></router-view>
-        </keep-alive>
+        <router-view></router-view>
     </div>
 </template>
 
